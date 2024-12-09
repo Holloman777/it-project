@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Program Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="survey">
+        <h1>IT Program Survey</h1>
+        <form id="surveyForm">
+            <!-- Step 1: Initial Interest Question -->
+            <div id="step1" class="question">
+                <label for="initialInterest">What aspect of IT interests you the most?</label>
+                <select id="initialInterest" name="initialInterest">
+                    <option value="hardwareNetworking">Working with hardware and network systems</option>
+                    <option value="softwareDesignSecurity">Focusing on software, design, or security</option>
+                </select>
+            </div>
+            <!-- Step 2A: Broad IT Foundation Question -->
+            <div id="step2A" class="question" style="display: none;">
+                <label for="broadITFoundation">Are you looking to gain a broad foundation in IT, including hardware, networking basics, and security, or do you already have experience and want to focus on more advanced networking?</label>
+                <select id="broadITFoundation" name="broadITFoundation">
+                    <option value="broadITFoundation">Broad IT Foundation</option>
+                    <option value="networkingExperience">Networking Experience</option>
+                </select>
+            </div>
+            <!-- Step 3A: Networking Experience Question -->
+            <div id="step3A" class="question" style="display: none;">
+                <label for="networkingExperience">Are you interested in advancing your skills in configuring networks, setting up routers and switches, and preparing for certifications like CompTIA Network+ or CCNA?</label>
+                <select id="networkingExperience" name="networkingExperience">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <!-- Step 2B: Creative Role Question -->
+            <div id="step2B" class="question" style="display: none;">
+                <label for="creativeRole">Are you more interested in a creative role, such as designing websites and coding?</label>
+                <select id="creativeRole" name="creativeRole">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <!-- Step 3B: Cybersecurity Interest Question -->
+            <div id="step3B" class="question" style="display: none;">
+                <label for="cybersecurityInterest">Do you already have some foundational IT skills, such as basic networking or troubleshooting, or are you completely new to IT?</label>
+                <select id="cybersecurityInterest" name="cybersecurityInterest">
+                    <option value="someExperience">I have some IT experience</option>
+                    <option value="noExperience">I am new to IT</option>
+                </select>
+            </div>
+            <!-- Step 4B: Specialized Cybersecurity Interest -->
+            <div id="step4B" class="question" style="display: none;">
+                <label for="specializedSecurity">Are you interested in specialized cybersecurity training, including ethical hacking, configuring firewalls, and risk management?</label>
+                <select id="specializedSecurity" name="specializedSecurity">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <!-- Submit Button -->
+            <button type="button" onclick="submitSurvey()">Submit</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,4 +1,3 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,15 +10,17 @@ body {
 }
 
 #survey {
-    background-color: white;
+    background-color: darkgreen;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
+    transition: all 0.3s ease;
 }
 
 h1 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .question {
@@ -47,6 +48,9 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    border: solid 2px yellow;
 }
 
 button:hover {
@@ -57,4 +61,28 @@ button:hover {
     margin-top: 20px;
     text-align: center;
     font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    display: none; /* Hide all questions by default */
+}
+
+.question:first-child {
+    display: block; /* Show the first question by default */
+}
+
+#result {
+    display: none; /* Hide result until the end */
+}
+
+@media (max-width: 600px) {
+    #survey {
+        width: 90%;
+    }
 }

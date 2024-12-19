@@ -15,54 +15,90 @@
                 <label for="initialInterest">What aspect of IT interests you the most?</label>
                 <select id="initialInterest" name="initialInterest">
                     <option value="hardwareNetworking">Working with hardware and network systems</option>
-                    <option value="softwareDesignSecurity">Focusing on software, design, or security</option>
+                    <option value="softwareSecurity">Focusing on software or security</option>
+                    <option value="webAppDesign">Web and App Design </option> <!-- Updated option for Web Development -->
                 </select>
+                <button type="button" onclick="nextStep('step1')">Next</button>
             </div>
             <!-- Step 2A: Broad IT Foundation Question -->
-            <div id="step2A" class="question" style="display: none;">
+            <div id="step2A" class="question">
                 <label for="broadITFoundation">Are you looking to gain a broad foundation in IT, including hardware, networking basics, and security, or do you already have experience and want to focus on more advanced networking?</label>
                 <select id="broadITFoundation" name="broadITFoundation">
                     <option value="broadITFoundation">Broad IT Foundation</option>
                     <option value="networkingExperience">Networking Experience</option>
                 </select>
+                <button type="button" onclick="nextStep('step2A')">Next</button>
             </div>
             <!-- Step 3A: Networking Experience Question -->
-            <div id="step3A" class="question" style="display: none;">
+            <div id="step3A" class="question">
                 <label for="networkingExperience">Are you interested in advancing your skills in configuring networks, setting up routers and switches, and preparing for certifications like CompTIA Network+ or CCNA?</label>
                 <select id="networkingExperience" name="networkingExperience">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
+                <button type="button" onclick="nextStep('step3A')">Next</button>
             </div>
             <!-- Step 2B: Creative Role Question -->
-            <div id="step2B" class="question" style="display: none;">
+            <div id="step2B" class="question">
                 <label for="creativeRole">Are you more interested in a creative role, such as designing websites and coding?</label>
                 <select id="creativeRole" name="creativeRole">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
+                <button type="button" onclick="nextStep('step2B')">Next</button>
+            </div>
+            <!-- Step 3B: Web Development Interest Question -->
+            <div id="step3C" class="question">
+                <label for="webDevelopmentInterest">Do you enjoy designing websites or apps?</label>
+                <select id="webDevelopmentInterest" name="webDevelopmentInterest">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="button" onclick="nextStep('step3C')">Next</button>
+            </div>
+            <!-- Step 4C: App Development Question -->
+            <div id="step4C" class="question">
+                <label for="appDevelopmentInterest">Would you like to focus on designing interactive web applications?</label>
+                <select id="appDevelopmentInterest" name="appDevelopmentInterest">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <button type="button" onclick="nextStep('step4C')">Next</button>
+            </div>
+            <!-- Step 5C: Front-end vs Back-end Question -->
+            <div id="step5C" class="question">
+                <label for="devFocus">Would you prefer to focus on front-end (designing the look and feel) or back-end (coding the server side) development?</label>
+                <select id="devFocus" name="devFocus">
+                    <option value="frontEnd">Front-end (designing the user interface)</option>
+                    <option value="backEnd">Back-end (coding the server side)</option>
+                </select>
+                <button type="button" onclick="nextStep('step5C')">Next</button>
             </div>
             <!-- Step 3B: Cybersecurity Interest Question -->
-            <div id="step3B" class="question" style="display: none;">
+            <div id="step3B" class="question">
                 <label for="cybersecurityInterest">Do you already have some foundational IT skills, such as basic networking or troubleshooting, or are you completely new to IT?</label>
                 <select id="cybersecurityInterest" name="cybersecurityInterest">
                     <option value="someExperience">I have some IT experience</option>
                     <option value="noExperience">I am new to IT</option>
                 </select>
+                <button type="button" onclick="nextStep('step3B')">Next</button>
             </div>
             <!-- Step 4B: Specialized Cybersecurity Interest -->
-            <div id="step4B" class="question" style="display: none;">
+            <div id="step4B" class="question">
                 <label for="specializedSecurity">Are you interested in specialized cybersecurity training, including ethical hacking, configuring firewalls, and risk management?</label>
                 <select id="specializedSecurity" name="specializedSecurity">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
+                <button type="button" onclick="nextStep('step4B')">Next</button>
             </div>
-            <!-- Submit Button -->
-            <button type="button" onclick="submitSurvey()">Submit</button>
         </form>
 
-        <div id="result" class="result"></div>
+        <!-- Final Result with Return Button -->
+        <div id="result" class="result" style="display: none;">
+            <div id="programSuggestion"></div>
+            <button id="returnButton" onclick="restartQuiz()" style="display:none;">Return</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
